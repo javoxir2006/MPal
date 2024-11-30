@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 10% 80% 10%;
+    grid-template-areas: "hd hd hd hd hd"
+                         "mn mn mn mn mn"
+                         "ft ft ft ft ft";
+
+    background-image: url(images/underwatertheme.jpeg);
+    background-size: cover;
+    transition: background-image 0.7s;
+}
+
+
+header {
+    grid-area: hd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgba(240, 248, 255, 0.21);
+}
+
+header .name {
+    font-size: 1rem;
+}
+
+.nav-bar {
+    width: 100px;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.nav-bar #navCloseBtn{
+    position: relative;
+    left: -20%;
+    display: none;
+    margin-left: 1rem;
+}
+
+.dark-mode{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    padding: 2px;
+    background-color: rgba(75, 75, 75, 0.337);
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2px;
+}
+
+.dark-mode div {
+    background-color: rgba(255, 255, 255, 0.226);
+    padding: 5px;
+    border-radius: 1rem;
+    transition: 0.5s;
+}
+
+.dark-mode .sun {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    
+
+    border: 1px solid black;
+    background-color: rgba(240, 248, 255, 0.7);
+}
+
+.moon {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Styling SideBar */
+
+.sidebar {
+    background-image: url(images/underwatertheme.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 70%;
+    left: -70%;
+    z-index: 4;
+    top: 10%;
+    height: calc(100vh - 20%);
+
+    overflow-y: scroll;
+}
+
+.sidebar h3 {
+    letter-spacing: 1px;
+    margin: 10px;
+    
+}
+
+.sidebar h3:active {
+    color: rgb(62, 62, 62);
+}
+
+.themes-collection {
+    display: none;
+    flex-direction: column;
+}
+
+.themes-collection i {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.themes {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   row-gap: 10px;
+}
+
+.themes img {
+    width: 120px;
+    display: block;
+    border-radius: 16px;
+    border: 1px solid black;
+    box-shadow: 0px 3px 5px rgb(42, 42, 42);
+}
+
+main {
+    grid-area: mn;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: rgba(240, 248, 255, 0.21);
+}
+
+.music-heading{
+    margin: 10px;
+    margin-top: 0;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+main .home-page, main .lofi-page, main .rain-page { 
+    width: 100%;
+    height: 80vh;
+}
+
+
+.home-page {
+    z-index: 3;
+}
+
+.lofi-page {
+    z-index: 2;
+    display: none;
+}
+
+.rain-page {
+    display: none;
+}
+
+
+footer {
+    font-size: 2rem;
+    background-color: rgba(240, 248, 255, 0.21);
+    grid-area: ft;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* design sliding cards*/
+
+.card-slider{
+    height: 330px;
+    padding-left: 10px;
+    display: grid;
+    overflow-x: scroll;
+    grid-template-columns: repeat(3, 1fr 1fr);
+    gap: 10px;
+    
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.card-slider audio {
+    width: 200px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 7px 10px rgb(48, 48, 48);
+    background-color: rgba(255, 255, 255, 0.677);
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card img {
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-left: 10px;
+
+}
+
+.card p {
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.play {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    bottom: 0px;
+
+}
+
+.play i{
+    font-size: 2.5rem;
+    color: rgb(0, 255, 0);
+}
+
+/* styling music-holder */
+
+.music-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.music{
+    width: calc(100% - 20px);
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 2rem;
+    position: relative;
+
+    background-color: rgba(255, 255, 255, 0.677);
+}
+
+.music img {
+    width: 150px;
+    height: 100px;
+    border-radius: 2rem;
+}
+
+.text {
+    margin-left: 10px;
+    width: 150px;
+    letter-spacing: 2px;
+}
+
+.text h3 {
+    font-weight: 800;
+    text-overflow: ellipsis;
+    white-space: nowrap;   
+    overflow: hidden;
+}
+
+.text p {
+    font-weight: 500;
+}
+
+.music .playBtn {
+    width: 100px;
+    display: grid;
+    place-content: center; 
+}
+
+.music .playBtn i {
+    font-size: 3rem;
+    color: red;
+}
+
+/* Styling Lofi Page */
+
+.title {
+    text-transform: capitalize;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+}
+
+.youtube-video{
+    display: block;
+    margin: 10px auto;
+    aspect-ratio: 16/9;
+    width: calc(100% - 20px);
+}
+
+/* Displaying rain page */
+
+.rain-page .rain-image {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 10px auto;
+}
+
+.sounds-collection {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sounds-collection div {
+    min-width: calc((100% - 20px - 10px) / 2);
+    height: 150px;
+    border: 2px solid black;
+}

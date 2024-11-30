@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <header>
+        <div class="nav-bar">
+            <i class="fa-solid fa-bars" id="navOpenBtn"></i>
+            <i class="fa-solid fa-xmark" id="navCloseBtn"></i>
+        </div>
+        <div class="name">
+            <h1>MPal</h1>
+        </div>
+        <div class="dark-mode">
+            <div class="sun" onclick="setDefault()" id="sun"><i class="fa-solid fa-cloud-sun"></i></div>
+            <div class="moon" onclick="setDarkMode()" id="moon"><i class="fa-solid fa-cloud-moon"></i></div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sideBar">
+        <h3 onclick="openThemes()">Themes</h3>
+        <div class="themes-collection" id="themesCollection">
+            <i class="fa-solid fa-angle-left" onclick="closeThemes()"></i>
+            <div class="themes">
+            <img src="images/airballoontheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/rainredplanttheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/astronauttheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/redflowertheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/underwatertheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/airballoontheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/rainredplanttheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/astronauttheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/redflowertheme.jpeg" alt="" onclick="changeTheme((this))">
+            <img src="images/underwatertheme.jpeg" alt="" onclick="changeTheme((this))">
+            </div>
+        </div>
+        <h3>About</h3>
+        
+    </div>
+
+    <main id="main">
+        <section class="home-page" id="homePg">
+            <h2 class="music-heading">Always the same</h2>
+            <div class="card-slider">
+                <div class="card">
+                    <img src="images/mountainhorse.jpeg">
+                    <h1>Mountain</h1>
+                    <p>Horse</p>
+                    <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                    <!-- <audio src="audios/Adam-zurek.m4a" controls></audio> -->
+                </div>
+                <div class="card">
+                    <img src="images/butterfly.jpeg">
+                    <h1>Butterfly</h1>
+                    <p>test</p>
+                    <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                </div>
+                <div class="card">
+                    <img src="images/park.jpeg">
+                    <h1>Park</h1>
+                    <p>kids</p>
+                    <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                </div>
+                <div class="card">
+                    <img src="images/rainforest.jpeg">
+                    <h1>Forest</h1>
+                    <p>waterflow</p>
+                    <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                </div>
+                <div class="card">
+                    <img src="images/park.jpeg">
+                    <h1>park1</h1>
+                    <p>test2</p>
+                    <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                </div>
+            
+            </div>
+            <h2 class="music-heading">Vanilla music</h2>
+            <section class="music-holder">
+                <div class="music">
+                    <img src="images/purplesplash.jpeg" alt="">
+                    <div class="text">
+                        <h3>Imagine Dragons</h3>
+                        <p>Believer</p>
+                    </div>
+                    <div class="playBtn">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <div class="music">
+                    <img src="images/forest.jpeg" alt="">
+                    <div class="text">
+                        <h3>Imagine Dragons</h3>
+                        <p>Believer</p>
+                    </div>
+                    <div class="playBtn">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <div class="music">
+                    <img src="images/farm.jpeg" alt="">
+                    <div class="text">
+                        <h3>Imagine Dragons</h3>
+                        <p>Believer</p>
+                    </div>
+                    <div class="playBtn">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <div class="music">
+                    <img src="images/village.jpeg" alt="">
+                    <div class="text">
+                        <h3>Imagine Dragons</h3>
+                        <p>Believer</p>
+                    </div>
+                    <div class="playBtn">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+
+                <div class="music">
+                    <img src="images/ocean.jpeg" alt="">
+                    <div class="text">
+                        <h3>Imagine Dragons</h3>
+                        <p>Believer</p>
+                    </div>
+                    <div class="playBtn">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="lofi-page" id="lofiPg">
+            <div class="youtube-lofi">
+                <h3 class="title">medieval lofi</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/WBnjO3zEwCM?si=Fa_5ocIYraVKo8ye" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="youtube-lofi">
+                <h3 class="title">best of all</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/mmKguZohAck?si=SNvkN4bTYkID0FDp"  title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="youtube-lofi">
+                <h3 class="title">lonely night</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/CMNyHBx1gak?si=6HivE6E3Ql8qZjep" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="youtube-lofi">
+                <h3 class="title">chill session</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/w4TNGhSj2tc?si=HAmbtafRahs1Mlje" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="youtube-lofi">
+                <h3 class="title">the drive</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/rqJDO3TWnac?si=kBmrMPKVXXnNBrD3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="youtube-lofi">
+                <h3 class="title">anxiety</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/zPyg4N7bcHM?si=D5SIhi-XE6bmmnRg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="youtube-lofi">
+                <h3 class="title">relaxing medieval</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/bQBbRWo0j5g?si=1K7F45O3muSNCIPM"  title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="youtube-lofi">
+                <h3 class="title">lonely night</h3>
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/8Wpy_DOeaP8?si=22NbyM5tR6Ms7qT8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="rain-page" id="rainPg">
+            <div class="rain-image">image with play button</div>
+            <div class="sounds-collection">
+                <div class="rain">rain</div>
+                <div class="thunder">thunder</div>
+                <div class="fire">fire</div>
+                <div class="snow">snow</div>
+                <div class="nature">nature</div>
+                <div class="wind">wind</div>
+                <div class="wave">wave</div>
+                <div class="coffeeshop">coffeeshop</div>
+                <div class="home">home</div>
+                <div class="taxi">taxi</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="home-icon"><i class="fa-solid fa-house" id="homeBtn"></i></div>
+        <div class="lofi-music"><i class="fa-brands fa-youtube" id="lofiBtn"></i></div>
+        <div class="rain-sounds"><i class="fa-solid fa-headphones" id="rainBtn"></i></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
